@@ -1,0 +1,17 @@
+{
+  "name": "buddhadvise",
+  "version": "1.0.0",
+  "description": "giving enlightment one click at a time",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "goodguygregory",
+  "license": "ISC"
+}
