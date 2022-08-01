@@ -63,32 +63,12 @@ function dharmaTeachingCreate(dharmaFromCard) {
     })
 }
 
-//  Sutras:
-
-function createSutraInstances(cb) {
-    async.parallel([
-        function (callback) {
-            sutraCreate("")
-        },
-    ])
-}
-
 //   Meditations:
 
 function createMeditationInstances(cb) {
     async.parallel([
         function (callback) {
             meditationCreate("")
-        },
-    ])
-}
-
-// Mantas:
-
-function createMantraInstances(cb) {
-    async.parallel([
-        function (callback) {
-            mantraCreate("")
         },
     ])
 }
@@ -136,13 +116,105 @@ function createDharmaInstances(cb) {
         function (callback) {
             dharmaTeachingCreate("May righteousness come to the wise: a treasure that others cannot share, that no thief can steal - a treasure that does not pass away.");
         }
+    ]);
+}
 
+// Sutra Teachings:
+
+function createSutraInstances(cb) {
+    async.parallel([
+        function (callback) {
+            sutraCreate("Bend your head and listen well, oh bodhisattva. Compassion speaks: 'Can there be bliss when all that lives must suffer? Shall you be saved and hear the whole world cry?'");
+        },
+        function (callback) {
+            sutraCreate("Just as wings allow a bird to take to the skies, so with the power of wisdom we work for the good of others.");
+        },
+        function (callback) {
+            sutraCreate("O perfect master, who shines upon all things and all folks as gleaming moonlight plays upon a thousand waters, your great compassion does not neglect a single creature");
+        },
+        function (callback) {
+            sutraCreate("Let us go out in a spirit of compassion, and take to others the benefits we have received. Let us teach the way, which is glorious from beginning to end. Let us urge people to live lives of perfect holiness.");
+        },
+        function (callback) {
+            sutraCreate("May I be a lamp for those in darkness, a home for the homeless, and a servant to the world.");
+        },
+        function (callback) {
+            sutraCreate("Those whose minds are filled with compassion will never enter a world dark with woes. No real harm will ever come to anyone who protects all living beings and shows them kindness");
+        },
+        function (callback) {
+            sutraCreate("Loving-kindness is a freedom of the heart, a luminous, blazing radiance.");
+        },
+        function (callback) {
+            sutraCreate("Let our love flow outward through the cosmos to its full height, its full depth, its full extent, an endless love, without hatred or enmity... And our life will bring heaven to earth");
+        },
+        function (callback) {
+            sutraCreate("Even as a mother at the risk of her life would watch over her only child, so let us with boundless mind and goodwill survey the whole world.");
+        },
+        function (callback) {
+            sutraCreate("May I be a protector to those without protection, a leader for those who travel, and a boat, a bridge, a passage for those who seek the farther shore.");
+        },
+        function (callback) {
+            sutraCreate("Compassion is the wish-fulfilling jewel, the auspicious jar from which the brilliance of good fortune comes... It is like the sky, spangled with stars of spotless virtues, always bringing prosperity and bliss.");
+        },
+        function (callback) {
+            sutraCreate("When we awake to the life-giving vow of compassion, we who are like broken tiles and scattered pebbles are transmuted into gold.");
+        },
+        function (callback) {
+            sutraCreate("Although the scent of flowers does not travel against the wind, the scent of a person who is good pervades everywhere.");
+        },
+    ]);
+}
+
+// Mantra Teachings:
+
+function createMantraInstances(cb) {
+    async.parallel([
+        function (callback) {
+            mantraCreate("Meditation is to wisdom as the lamp is to its light.");
+        },
+        function (callback) {
+            mantraCreate("The finest souls, like lotus petals in a pool, are spotless. Muddy water just runs off them. They are never blemished.");
+        },
+        function (callback) {
+            mantraCreate("Within our impure mind the pure mind is to be found.");
+        },
+        function (callback) {
+            mantraCreate("If the inner mind has been tamed, the outer enemy cannot harm me");
+        },
+        function (callback) {
+            mantraCreate("Let a man overcome anger by love, let him overcome evil by good; Let him overcome greed by liberality, Let him overcome the liar by truth.");
+        },
+        function (callback) {
+            mantraCreate("Although my eyes, blinded by passions, do not see the brilliant light that embraces me, the great compassion never tires, always casting its light upon me.");
+        },
+        function (callback) {
+            mantraCreate("He who does his duty is tolerant like the earth, firm as a pillar and clear as a lake: no further births will be in store for such a one.");
+        },
+        function (callback) {
+            mantraCreate("As the bee collects nectar and departs without injuring the flower, so should a man behave in his village.");
+        },
+        function (callback) {
+            mantraCreate("If you stop talking and thinking, then there is nowhere you cannot go. Returning to the source, you gain the meaning; chasing forms, you lose the wholeness. A moment's true insight transcends all.");
+        },
+        function (callback) {
+            mantraCreate("Just as a solid rock remains unshaken by the wind, in the same way neither sights, nor sounds, nor smells, nor tastes can cause a steadfast one to waver. Firm is our mind, and thus we gain salvation.");
+        },
+        function (callback) {
+            mantraCreate("Delgiht in senuous objects is like clouds in the autumn sky: impulsive and unstable. We shall give them up and resort to quiet forest groves.");
+        },
+        function (callback) {
+            mantraCreate("That deed is well done of which a man who does not repent, and the reward of which he receives gladly and cheerfully.");
+        },
+        function (callback) {
+            mantraCreate("Dharma is good, but what constitues dharma? To do no evil and a great deal of good. To be kind, generous, truthful and pure.");
+        },
     ])
 }
 
-
 async.series([
-    createDharmaInstances
+    createDharmaInstances,
+    createSutraInstances,
+    createMantraInstances
 ],
     function (err, results) {
         if (err) {
