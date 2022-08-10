@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 let port = 6061;
 
 // TODO: Initialize Data before using mongo in the project
-// mongoose.connect('mongodb://localhost:2701/buddhaisms');
+// mongoose.connect('mongodb://localhost:2701/buddhaisms', {useNewUrlParser: true, useUnifiedTopology: true});
 
 let app = express();
 
@@ -17,5 +17,5 @@ app.use('/buddhaisms/', routes);
 
 
 app.listen(port, () => {
-    console.log('guiding you through the way on http://%s', port);
+    console.log('guiding you through the way on http://localhost:%s', port);
 });

@@ -63,16 +63,6 @@ function dharmaTeachingCreate(dharmaFromCard) {
     })
 }
 
-//   Meditations:
-
-function createMeditationInstances(cb) {
-    async.parallel([
-        function (callback) {
-            meditationCreate("")
-        },
-    ])
-}
-
 //  Dharma Teachings:
 
 function createDharmaInstances(cb) {
@@ -211,10 +201,59 @@ function createMantraInstances(cb) {
     ])
 }
 
+//   Meditations Teachings:
+
+function createMeditationInstances(cb) {
+    async.parallel([
+        function (callback) {
+            meditationCreate("All the water and wine I've consumed have failed to satisfy my thirst or bring me contentment. Let me drink therefore from this stream of enlightened mind, o fortunate ones.");
+        },
+        function (callback) {
+            meditationCreate("Enlightenment is seeing the unseen itself, and in this there is no seeing and no seer - only beginningless, endless calm.");
+        },
+        function (callback) {
+            meditationCreate("If we speak or act with a pure thought, hapiness follows us, like a shadow that never leaves us.");
+        },
+        function (callback) {
+            meditationCreate("Let our worries disperse like clouds in a clear blue sky. Like a thief entering an empty house, bad thoughts can do no harm to an empty mind.");
+        },
+        function (callback) {
+            meditationCreate("The radiance of amid buddha's light of truth surpasses all... However far his light extends, love penetrates: the joy of faith is attained. Take refuge in the great one who gives comfort.");
+        },
+        function (callback) {
+            meditationCreate("He is the bright lamp dispelling the darkness of blind ignorance. He is the wish-granting tree from which comes the happiness of everyone alive. He is the countless rays of the sun of great kindness.");
+        },
+        function (callback) {
+            meditationCreate("If we can be wise, after listening to the laws we become serene, like a deep, smooth, still lake.");
+        },
+        function (callback) {
+            meditationCreate("From one darkness into another darkness soon I must go. Light the long way before me, moon on the mountain rim!");
+        },
+        function (callback) {
+            meditationCreate("Now may every living thing, young or old, weak or strong, living near or far, known or unknown, living or departed or yet unborn, may every living thing be full of bliss.");
+        },
+        function (callback) {
+            meditationCreate("There is pleasure when an itch is scratched, but to be without any itching is more pleasureable still. Likewise, there are pleasures in worldy desires... But to be without desires is more pleasurable still.");
+        },
+        function (callback) {
+            meditationCreate("Omniscient deities, please lend me your ear. Let your great love lead me on the path... And take me to the pure paradise realms.");
+        },
+        function (callback) {
+            meditationCreate("Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.");
+        },
+        function (callback) {
+            meditationCreate("Let us live happily among those who are greedy or ailining, let us live free from greed or ailment! Let us be like the bright gods, feeding on happiness.");
+        },
+
+
+    ])
+}
+
 async.series([
     createDharmaInstances,
     createSutraInstances,
-    createMantraInstances
+    createMantraInstances,
+
 ],
     function (err, results) {
         if (err) {
