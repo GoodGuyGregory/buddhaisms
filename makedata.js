@@ -249,16 +249,9 @@ function createMeditationInstances(cb) {
     ])
 }
 
-async.series([
-    createDharmaInstances,
-    createSutraInstances,
-    createMantraInstances,
+createDharmaInstances();
+createSutraInstances();
+createMantraInstances();
 
-],
-    function (err, results) {
-        if (err) {
-            console.log('error ' + err);
-        }
-    });
 
 
